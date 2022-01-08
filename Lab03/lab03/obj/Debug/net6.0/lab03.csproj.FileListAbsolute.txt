@@ -1,0 +1,15 @@
+C:\Users\Iwni D\Desktop\C#\Project\lab03\bin\Debug\net6.0\lab03.exe
+C:\Users\Iwni D\Desktop\C#\Project\lab03\bin\Debug\net6.0\lab03.deps.json
+C:\Users\Iwni D\Desktop\C#\Project\lab03\bin\Debug\net6.0\lab03.runtimeconfig.json
+C:\Users\Iwni D\Desktop\C#\Project\lab03\bin\Debug\net6.0\lab03.dll
+C:\Users\Iwni D\Desktop\C#\Project\lab03\bin\Debug\net6.0\ref\lab03.dll
+C:\Users\Iwni D\Desktop\C#\Project\lab03\bin\Debug\net6.0\lab03.pdb
+C:\Users\Iwni D\Desktop\C#\Project\lab03\obj\Debug\net6.0\lab03.csproj.AssemblyReference.cache
+C:\Users\Iwni D\Desktop\C#\Project\lab03\obj\Debug\net6.0\lab03.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Iwni D\Desktop\C#\Project\lab03\obj\Debug\net6.0\lab03.AssemblyInfoInputs.cache
+C:\Users\Iwni D\Desktop\C#\Project\lab03\obj\Debug\net6.0\lab03.AssemblyInfo.cs
+C:\Users\Iwni D\Desktop\C#\Project\lab03\obj\Debug\net6.0\lab03.csproj.CoreCompileInputs.cache
+C:\Users\Iwni D\Desktop\C#\Project\lab03\obj\Debug\net6.0\lab03.dll
+C:\Users\Iwni D\Desktop\C#\Project\lab03\obj\Debug\net6.0\ref\lab03.dll
+C:\Users\Iwni D\Desktop\C#\Project\lab03\obj\Debug\net6.0\lab03.pdb
+C:\Users\Iwni D\Desktop\C#\Project\lab03\obj\Debug\net6.0\lab03.genruntimeconfig.cache
