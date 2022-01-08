@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Iwni D\\Desktop\\C#\\Project\\lab03\\lab03.csproj",
+      "projectUniqueName": "C:\\Users\\Iwni D\\Documents\\GitHub\\ads-bugreyev-kp13\\Lab03\\lab03\\lab03.csproj",
       "projectName": "lab03",
-      "projectPath": "C:\\Users\\Iwni D\\Desktop\\C#\\Project\\lab03\\lab03.csproj",
+      "projectPath": "C:\\Users\\Iwni D\\Documents\\GitHub\\ads-bugreyev-kp13\\Lab03\\lab03\\lab03.csproj",
       "packagesPath": "C:\\Users\\Iwni D\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Iwni D\\Desktop\\C#\\Project\\lab03\\obj\\",
+      "outputPath": "C:\\Users\\Iwni D\\Documents\\GitHub\\ads-bugreyev-kp13\\Lab03\\lab03\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Iwni D\\AppData\\Roaming\\NuGet\\NuGet.Config",

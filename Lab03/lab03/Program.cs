@@ -97,8 +97,10 @@ class Program
                 case 3: n3++; break;
             }
         }
+
         array2n = new int[n2];
         array3n = new int[n3];
+
         int i2 = 0;
         int i3 = 0;
         for (int i = 0; i < fullArray.Length; i++)
