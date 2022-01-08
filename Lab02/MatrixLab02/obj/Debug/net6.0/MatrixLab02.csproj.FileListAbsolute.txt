@@ -1,0 +1,15 @@
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\bin\Debug\net6.0\MatrixLab02.exe
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\bin\Debug\net6.0\MatrixLab02.deps.json
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\bin\Debug\net6.0\MatrixLab02.runtimeconfig.json
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\bin\Debug\net6.0\MatrixLab02.dll
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\bin\Debug\net6.0\ref\MatrixLab02.dll
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\bin\Debug\net6.0\MatrixLab02.pdb
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\obj\Debug\net6.0\MatrixLab02.csproj.AssemblyReference.cache
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\obj\Debug\net6.0\MatrixLab02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\obj\Debug\net6.0\MatrixLab02.AssemblyInfoInputs.cache
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\obj\Debug\net6.0\MatrixLab02.AssemblyInfo.cs
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\obj\Debug\net6.0\MatrixLab02.csproj.CoreCompileInputs.cache
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\obj\Debug\net6.0\MatrixLab02.dll
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\obj\Debug\net6.0\ref\MatrixLab02.dll
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\obj\Debug\net6.0\MatrixLab02.pdb
+C:\Users\Iwni D\Desktop\C#\Project\MatrixLab02\obj\Debug\net6.0\MatrixLab02.genruntimeconfig.cache
