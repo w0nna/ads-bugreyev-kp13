@@ -1,0 +1,15 @@
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\bin\Debug\net6.0\Lab05ASD.exe
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\bin\Debug\net6.0\Lab05ASD.deps.json
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\bin\Debug\net6.0\Lab05ASD.runtimeconfig.json
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\bin\Debug\net6.0\Lab05ASD.dll
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\bin\Debug\net6.0\Lab05ASD.pdb
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\Lab05ASD.csproj.AssemblyReference.cache
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\Lab05ASD.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\Lab05ASD.AssemblyInfoInputs.cache
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\Lab05ASD.AssemblyInfo.cs
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\Lab05ASD.csproj.CoreCompileInputs.cache
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\Lab05ASD.dll
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\refint\Lab05ASD.dll
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\Lab05ASD.pdb
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\Lab05ASD.genruntimeconfig.cache
+C:\Users\1wni Work\Documents\asd-bugreyev-kp13\Lab05\Lab05ASD\Lab05ASD\obj\Debug\net6.0\ref\Lab05ASD.dll
