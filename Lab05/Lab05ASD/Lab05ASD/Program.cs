@@ -2,29 +2,20 @@
 using static System.Console;
 using static System.Convert;
 
-
-class Programm
+class Program
 {
-    static int n;
-    static int[,] mas;
-    static int[] masSorted;
-    static int what;
-    static bool IsCorrect = false;
-
-    static void Main()
+    static void Main(string[] args)
     {
-        do
-        {
-            Write("Впишите N: ");
-            IsCorrect = false;
-            n = ToInt16(ReadLine());
-            if(n > 0)
-            {
-                IsCorrect = true;
-            }
-            Clear();
-        }
-        while (IsCorrect == false);
+        int what;
+
+        Write("Впишите N: ");
+        bool IsCorrect = false;
+        int n = ToInt16(ReadLine());
+        if (n > 0)
+            IsCorrect = true;
+        Clear();
+
+        while (IsCorrect == false) ;
         if (n >= 4)
         {
             do
@@ -33,232 +24,484 @@ class Programm
                 IsCorrect = false;
                 what = ToInt16(ReadLine());
                 if (what == 0 || what == 1)
-                {
                     IsCorrect = true;
-                }
                 Clear();
             }
             while (IsCorrect == false);
-           
+
 
             if (what == 1)
+                DoWith2022(n);
+            else
+                DoWithOut2022(n);
+        }
+        else
+            DoWithOut2022(n);
+    }
+    static void DoWith2022(int n)
+    {
+        Int64 temp;
+        int schetchik = 0;
+        int schetchik2 = 0;
+        Random rnd = new Random();
+        Int64[] mainMass = new Int64[n];
+        int RandRow = rnd.Next(1, n - 1);
+        Int64[] massWithout = new Int64[n - RandRow];
+        Int64[] mass2022 = new long[RandRow];
+        Int64[] massSorted = new long[n];
+        int[] y2022 = new int[RandRow];
+
+        WriteLine("-----GENERATING----\n");
+        for (int i = 0; i < n; i++)
+        {
+            mainMass[i] = rnd.NextInt64(1000000000000000, 9999999999999999);
+            WriteLine(mainMass[i]);
+        }
+        WriteLine("\n--------\ny ryads with 2022:[no sorted]");
+
+        for (int i = 0; i < RandRow; i++)
+        {
+            var r = rnd.Next(0, n);
+            if (!(y2022.Contains(r)))
+                y2022[i] = r;
+            else
+                i--;
+        }
+        for (int i = 0; i < RandRow; i++)
+            Write(y2022[i]);
+
+
+
+        WriteLine("\ny ryads with 2022:[sorted]");
+        Array.Sort(y2022);
+        for (int i = 0; i < RandRow; i++)
+        {
+            Write(y2022[i]);
+        }
+
+        WriteLine("\n--------\nMain Mass with 2022\n");
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < RandRow; j++)
+                if (i == y2022[j])
+                {
+                    mainMass[i] = rnd.NextInt64(2022000000000000, 2022999999999999);
+                }
+            WriteLine(mainMass[i]);
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            temp = mainMass[i];
+            temp = temp / Convert.ToInt64(Math.Pow(10, 12));
+            if (temp == 2022)
             {
-                GeneratorWith2022();
+                mass2022[schetchik2] = mainMass[i];
+                schetchik2++;
             }
             else
             {
-                GeneratorDef();
+                massWithout[schetchik] = mainMass[i];
+                schetchik++;
             }
         }
-        else
+        WriteLine("\n----Massive not sorted----\n");
+
+        for (int i = 0; i < RandRow; i++)
         {
-            GeneratorWith2022();
+            WriteLine(mass2022[i]);
         }
-        
-    }
-    static void GeneratorDef()
-    {
-        mas = new int[n,16];
-        Random rnd = new Random();
-        for (int i = 0; i < n; i++)
+        WriteLine("\n----");
+        for (int i = 0; i < n - RandRow; i++)
         {
-            for(int x =0; x < 16; x++)
+            WriteLine(massWithout[i]);
+        }
+        if (massWithout.Length != 1)
+            for (int z = 0; z < n; z++)
             {
-                mas[i, x] = rnd.Next(0, 9);
-            }
-
-        }
-    }
-
-    static void GeneratorWith2022()
-    {
-        WriteLine("Номера на сортировку.");
-        mas = new int[n, 16];
-        int f;
-        Random rnd = new Random();
-        if (n >= 4)
-        {
-            f = rnd.Next(1, n - 2);
-        }
-        else
-        {
-            f = 1;
-        }
-
-        int[] x2022 = new int[f];
-        int RandRow = rnd.Next(0, n);
-        for (int i = 0; i < n; i++)
-        {
-            for (int x = 0; x < 16; x++)
-            {
-                mas[i, x] = rnd.Next(0, 9);
-            }
-
-        }
-        for (int i = 0; i < f; i++)
-        {
-            for (int x = 0; x < 16; x++)
-            {
-                if (x == 0 || x == 1 || x == 2 || x == 3)
+                for (int j = 0; j < n - RandRow; j++)
                 {
-                    switch (x)
+                    bool IsOkey = false;
+                    int i = 16 - 1;
+                    long temp2 = 0;
+
+                    do
                     {
-                        case 0:
-                            mas[RandRow, x] = 2;
-                            break;
-                        case 1:
-                            mas[RandRow, x] = 0;
-                            break;
-                        case 2:
-                            mas[RandRow, x] = 2;
-                            break;
-                        case 3:
-                            mas[RandRow, x] = 2;
-                            break;
-
-                    }
-
-                }
-
-
-            }
-            x2022[i] = RandRow;
-            
-            RandRow = rnd.Next(0, n);
-        }
-        for(int i =0; i<f; i++)
-        {
-            Write(x2022[i] + "; \n");
-        }
-       
-
-        int v = 0;
-        for (int i = 0; i < n; i++)
-        {
-            for (int x = 0; x < 16; x++)
-            {
-                Write(mas[i, x]);
-            }
-            WriteLine(" ");
-        }
-        //Sort
-        v = Sorted(f, x2022, v);
-
-    }
-
-    private static int Sorted(int f, int[] x2022, int v)
-    {
-        int[,] masSorted2022 = new int[f, 16];
-        int[,] masSorted = new int[n - f, 16];
-        int[] ysorted = new int[n-f]; 
-        for (int i = 0; i < n; i++)
-        {
-            bool No2022 = false;
-
-
-            for (int p = 0; p < f; p++)
-            {
-                if (i != x2022[p])
-                {
-                    No2022 = true;
-                }
-            }
-            if (No2022 == true)
-            {
-                if (!(i + 1 >= n))
-                {
-                    v = SortMain(f, v, masSorted, i);
-                }
-
-            }
-            else
-            {
-                if (f != 1)
-                {
-                    continue;
-                }
-                else
-                {
-                    for (int p = 0; p < f; p++)
-                    {
-                        for (int r = 0; r < 16; r++)
+                        temp = massWithout[j] / Convert.ToInt64(Math.Pow(10, i));
+                        if (!(j + 1 >= n - RandRow))
+                            temp2 = massWithout[j + 1] / Convert.ToInt64(Math.Pow(10, i));
+                        else
                         {
-                            masSorted2022[p, r] = mas[x2022[p], r];
+                            j++;
+                            break;
+                        }
+
+                        if (temp > temp2)
+                        {
+                            if (!(j + 1 >= n - RandRow))
+                            {
+                                temp = massWithout[j + 1];
+                                massWithout[j + 1] = massWithout[j];
+                                massWithout[j] = temp;
+                                j++;
+                            }
+                            else
+                                j = 0;
+
+                        }
+                        else if (temp == temp2)
+                            i--;
+                        else
+                            IsOkey = true;
+                    }
+                    while (IsOkey == false);
+
+                }
+            }
+        WriteLine("\n----SORTED----\n");
+        for (int i = 0; i < n - RandRow; i++)
+        {
+            WriteLine(massWithout[i]);
+        }
+        WriteLine(" ");
+        if (y2022.Length != 1)
+            for (int z = 0; z < n; z++)
+            {
+                for (int j = 0; j < RandRow; j++)
+                {
+                    bool IsOkey = false;
+                    int i = 16 - 5;
+                    long temp2 = 0;
+
+                    do
+                    {
+                        temp = (mass2022[j] / Convert.ToInt64(Math.Pow(10, i))) % 10;
+                        if (!(j + 1 >= RandRow))
+                            temp2 = mass2022[j + 1] / (Convert.ToInt64(Math.Pow(10, i))) % 10;
+                        else
+                        {
+                            if (!(j + 1 >= RandRow))
+                            {
+                                j++;
+                                break;
+                            }
+
+                        }
+
+                        if (temp < temp2)
+                        {
+                            if (!(j + 1 >= RandRow))
+                            {
+                                temp = mass2022[j + 1];
+                                mass2022[j + 1] = mass2022[j];
+                                mass2022[j] = temp;
+                                j++;
+                            }
+                            else
+                                j = 0;
+
+                        }
+                        else if (temp == temp2)
+                        {
+                            if (!(i <= 0))
+                            {
+                                i--;
+                            }
+                        }
+                        else
+                            IsOkey = true;
+                    }
+                    while (IsOkey == false);
+                }
+            }
+
+
+
+
+
+        for (int i = 0; i < RandRow; i++)
+        {
+            WriteLine(mass2022[i]);
+        }
+
+        WriteLine("\n----RESULT----\n");
+
+
+        for (int i = 0; i < RandRow; i++)
+        {
+            massSorted[y2022[i]] = mass2022[i];
+        }
+
+        int j1 = 0;
+        for (int x = 0; x < n - RandRow; x++)
+        {
+            int i = 16 - 4;
+            bool isOkey;
+            temp = massWithout[x] / Convert.ToInt64(Math.Pow(10, i));
+            do
+            {
+                isOkey = false;
+                if (!(j1 > n))
+                {
+                    for (int y = 0; y < RandRow; y++)
+                    {
+                        if (j1 == y2022[y])
+                        {
+                            isOkey = true;
                         }
                     }
+                    if (isOkey == false)
+                    {
+                        massSorted[j1] = massWithout[x];
+                        j1++;
+                        continue;
+                    }
+                    else
+                    {
+                        j1++;
+                        continue;
+                    }
+                }
+            }
+            while (isOkey == true);
+
+
+
+        }
+        for (int i = 0; i < n; i++)
+        {
+            WriteLine(massSorted[i]);
+        }
+
+    }
+
+    static void DoWithOut2022(int n)
+    {
+        Int64 temp;
+        int schetchik = 0;
+        int schetchik2 = 0;
+        Random rnd = new Random();
+        Int64[] mainMass = new Int64[n];
+        int RandRow = 0;
+        Int64[] massSorted = new long[n];
+        WriteLine("-----GENERATING----\n");
+        for (int i = 0; i < n; i++)
+        {
+            mainMass[i] = rnd.NextInt64(1000000000000000, 9999999999999999);
+            WriteLine(mainMass[i]);
+        }
+
+        for (int i = 0; i < n; i++)
+        {
+            temp = mainMass[i] / Convert.ToInt64(Math.Pow(10, 12));
+            if (temp == 2022)
+            {
+                RandRow++;
+            }
+        }
+        int[] y2022 = new int[RandRow];
+        if (RandRow != 0)
+        {
+            for (int i = 0; i < n; i++)
+            {
+
+                temp = mainMass[i] / Convert.ToInt64(Math.Pow(10, 12));
+                if (temp == 2022)
+                {
+                    y2022[schetchik] = i;
+                    schetchik++;
                 }
 
             }
         }
-        WriteRez(f, x2022, masSorted);
+        schetchik = 0;
+        schetchik2 = 0;
+        Int64[] mass2022 = new long[RandRow];
+        Int64[] massWithout = new Int64[n - RandRow];
 
-        return v;
-    }
-
-    private static int SortMain(int f, int v, int[,] masSorted, int i)
-    {
-        int z = 0;
-        do
+        for (int i = 0; i < n - RandRow; i++)
         {
-            v++;
-        }
-        while ((!(v >= 16 && i + 1 >= n) && mas[i, v] == mas[i + 1, v]));
-
-        if (!(v >= 16 && i + 1 >= n))
-        {
-            if (mas[i, v] < mas[i + 1, v])
+            temp = mainMass[i] / Convert.ToInt64(Math.Pow(10, 12));
+            if (temp != 2022)
             {
-
-                for (int r = 0; r <= 15; r++)
-                {
-                    if (!(z + 1 >= n - f && i + 1 >= n))
-                    {
-                        masSorted[z, r] = mas[i, r];
-                        
-                       
-                    }
-                }
-                if (!(z >= n - f))
-                {
-                    z++;
-                }
-
+                massWithout[schetchik] = mainMass[i];
+                schetchik++;
             }
             else
             {
-                MensheChemSledMassiv(f, masSorted, i ,v, z);
+                mass2022[schetchik2] = mainMass[i];
+                schetchik2++;
             }
+
         }
 
-        return v;
-    }
 
-    private static void MensheChemSledMassiv(int f, int[,] masSorted, int i, int v , int z)
-    {
-        for (int r = 0; r <= 15; r++)
+
+        WriteLine("\n----Massive not sorted----\n");
+        if (RandRow != 0)
         {
-            if (!(z + 1 >= n - f && i + 1 >= n))
+            for (int i = 0; i < RandRow; i++)
             {
-                mas[i + 1, r] = mas[i, r];
-
-
+                WriteLine(mass2022[i]);
             }
-        }
-        if (!(z >= n - f))
-        {
-            z++;
-        }
-    }
 
-    private static void WriteRez(int f, int[] x2022, int[,] masSorted)
-    {
-        for (int p = 0; p < (n - f); p++)
+            WriteLine("\n----");
+        }
+
+        for (int i = 0; i < n - RandRow; i++)
         {
-            for (int r = 0; r < 16; r++)
+            WriteLine(massWithout[i]);
+        }
+        for (int z = 0; z < n; z++)
+        {
+            for (int j = 0; j < n - RandRow; j++)
             {
-                Write(masSorted[p, r]);
+                bool IsOkey = false;
+                int i = 16 - 1;
+                long temp2 = 0;
+
+                do
+                {
+                    temp = massWithout[j] / Convert.ToInt64(Math.Pow(10, i));
+                    if (!(j + 1 >= n - RandRow))
+                        temp2 = massWithout[j + 1] / Convert.ToInt64(Math.Pow(10, i));
+                    else
+                    {
+                        j++;
+                        break;
+                    }
+
+                    if (temp > temp2)
+                    {
+                        if (!(j + 1 >= n - RandRow))
+                        {
+                            temp = massWithout[j + 1];
+                            massWithout[j + 1] = massWithout[j];
+                            massWithout[j] = temp;
+                            j++;
+                        }
+                        else
+                            j = 0;
+
+                    }
+                    else if (temp == temp2)
+                        i--;
+                    else
+                        IsOkey = true;
+                }
+                while (IsOkey == false);
+
             }
-            WriteLine("");
         }
+        if (RandRow > 0)
+        {
+            for (int z = 0; z < n; z++)
+            {
+                for (int j = 0; j < RandRow; j++)
+                {
+                    bool IsOkey = false;
+                    int i = 16 - 5;
+                    long temp2 = 0;
+
+                    do
+                    {
+                        temp = (mass2022[j] / Convert.ToInt64(Math.Pow(10, i))) % 10;
+                        if (!(j + 1 >= RandRow))
+                            temp2 = mass2022[j + 1] / (Convert.ToInt64(Math.Pow(10, i))) % 10;
+                        else
+                        {
+                            if (!(j + 1 >= RandRow))
+                            {
+                                j++;
+                                break;
+                            }
+
+                        }
+
+                        if (temp < temp2)
+                        {
+                            if (!(j + 1 >= RandRow))
+                            {
+                                temp = mass2022[j + 1];
+                                mass2022[j + 1] = mass2022[j];
+                                mass2022[j] = temp;
+                                j++;
+                            }
+                            else
+                                j = 0;
+
+                        }
+                        else if (temp == temp2)
+                        {
+                            if (!(i <= 0))
+                            {
+                                i--;
+                            }
+                        }
+                        else
+                            IsOkey = true;
+                    }
+                    while (IsOkey == false);
+                }
+            }
+        }
+        WriteLine("\n----RESULT----\n");
+
+
+        for (int i = 0; i < RandRow; i++)
+        {
+            massSorted[y2022[i]] = mass2022[i];
+        }
+
+        int j1 = 0;
+        for (int x = 0; x < n - RandRow; x++)
+        {
+            int i = 16 - 4;
+            bool isOkey;
+            temp = massWithout[x] / Convert.ToInt64(Math.Pow(10, i));
+            do
+            {
+                isOkey = false;
+                if (!(j1 > n))
+                {
+                    for (int y = 0; y < RandRow; y++)
+                    {
+                        if (j1 == y2022[y])
+                        {
+                            isOkey = true;
+                        }
+                    }
+                    if (isOkey == false)
+                    {
+                        massSorted[j1] = massWithout[x];
+                        j1++;
+                        continue;
+                    }
+                    else
+                    {
+                        j1++;
+                        continue;
+                    }
+                }
+            }
+            while (isOkey == true);
+
+
+
+        }
+        for (int i = 0; i < n; i++)
+        {
+            WriteLine(massSorted[i]);
+        }
+
+
+
     }
+
+
 }
+
+
+
+
+
