@@ -10,7 +10,19 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.DeepPurple.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
+                <!--PRIMARY-->
             </ResourceDictionary.MergedDictionaries>
+                <SolidColorBrush x:Key="PrimaryHueLightBrush" Color="White"/>
+                <SolidColorBrush x:Key="PrimaryHueLightForegroundBrush" Color="#333333"/>
+            <SolidColorBrush x:Key="PrimaryHueMidBrush" Color="#FFFFFF"/>
+                <SolidColorBrush x:Key="PrimaryHueMidForegroundBrush" Color="#FFFFFF"/>
+            <SolidColorBrush x:Key="PrimaryHueDarkBrush" Color="#FFFFFF"/>
+                <SolidColorBrush x:Key="PrimaryHueDarkForegroundBrush" Color="#FFFFFF"/>
+            <SolidColorBrush x:Key="SecondaryAccentBrush" Color="#FFFFFF"/>
+                <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="#FFFFFF"/>
+
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
