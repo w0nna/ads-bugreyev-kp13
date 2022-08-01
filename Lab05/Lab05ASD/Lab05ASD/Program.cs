@@ -92,8 +92,7 @@ class Program
 
         for (int i = 0; i < n; i++)
         {
-            temp = mainMass[i];
-            temp = temp / Convert.ToInt64(Math.Pow(10, 12));
+            temp = mainMass[i] / Convert.ToInt64(Math.Pow(10, 12));
             if (temp == 2022)
             {
                 mass2022[schetchik2] = mainMass[i];
